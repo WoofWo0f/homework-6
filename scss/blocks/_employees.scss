@@ -1,0 +1,76 @@
+.employees {
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  &-photo {
+    width: 100%;
+    height: auto;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  &-name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #2d3033;
+  }
+  &-position {
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $pink;
+  }
+  &-description {
+    font-size: 18px;
+    line-height: 21px;
+    color: #6c7279;
+  }
+  &-socialmedia {
+    display: flex;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .employees {
+    &-name {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &-position {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &-description {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .employees {
+    &-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .employees {
+    &-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

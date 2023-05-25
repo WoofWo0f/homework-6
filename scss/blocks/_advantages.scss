@@ -1,0 +1,59 @@
+.advantages {
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, auto);
+  }
+  &-item {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  &-icon {
+    width: calc(75% + 3vw);
+    height: auto;
+  }
+  &-title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #2d3033;
+  }
+  &-description {
+    font-size: 18px;
+    line-height: 21px;
+    color: #6c7279;
+  }
+}
+@media (max-width: 1024px) {
+  .advantages {
+    &-title {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &-description {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .advantages {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .advantages {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

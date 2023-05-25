@@ -1,0 +1,82 @@
+.slider {
+  &-content {
+    padding: 0 5px;
+    max-width: 2048px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  &-image {
+    flex: 1 1 40%;
+    width: 100%;
+    height: auto;
+  }
+  &-text {
+    flex: 0 1 60%;
+    color: $white;
+    background: $quoteBg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 100px;
+    gap: 30px;
+  }
+  &-quote {
+    font-family: "Cardo";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    text-transform: capitalize;
+  }
+  &-author {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+  &-control {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  &-button {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #7e5d6f;
+    border-radius: 50%;
+    &:nth-child(2) {
+      background: #7e5d6f;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .slider {
+    &-quote {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &-author {
+      font-size: 12px;
+      line-height: 14px;
+    }
+    &-text {
+      padding: 10px 50px;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .slider {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+    &-text {
+      text-align: center;
+      padding: 20px 30px 100px;
+      gap: 30px;
+    }
+  }
+}
